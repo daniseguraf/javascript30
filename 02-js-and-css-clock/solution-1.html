@@ -63,6 +63,11 @@
     .hour-hand, .min-hand, .second-hand {
       transform-origin: 100%;
     }
+
+    .second-hand {
+      transition: all 0.05s;
+      transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1)
+    }
   </style>
   <script>
     // This is an alternative solution using a simple counter
@@ -81,6 +86,7 @@
       }
 
       seconds++;
+
     }, 1000);
   </script>
 </body>
