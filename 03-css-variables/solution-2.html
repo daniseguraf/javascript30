@@ -55,7 +55,7 @@
     }
   </style>
   <script>
-    // Solution 2
+    // Solution 2: Using suffix and dinamic varibles values
 
     const inputs = document.querySelectorAll('input');
 
@@ -63,7 +63,7 @@
     inputs.forEach(el => el.addEventListener('mousemove', updateValue))
 
     function updateValue(event) {
-      const suffix = event.dataset.sizing || '';
+      const suffix = event.target.dataset.sizing || '';
       document.documentElement.style.setProperty(`--${event.target.name}`, event.target.value + suffix)
     }
   </script>

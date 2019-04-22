@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Array Cardio 💪</title>
+</head>
+<body>
+  <p><em>Psst: have a look at the JavaScript Console</em> 💁</p>
+  <script>
+    // Get your shorts on - this is an array workout!
+    // ## Array Cardio Day 1
+
+    // Some data we can work with
+
+    const inventors = [
+      { first: 'Albert', last: 'Einstein', year: 1879, passed: 1955 },
+      { first: 'Isaac', last: 'Newton', year: 1643, passed: 1727 },
+      { first: 'Galileo', last: 'Galilei', year: 1564, passed: 1642 },
+      { first: 'Marie', last: 'Curie', year: 1867, passed: 1934 },
+      { first: 'Johannes', last: 'Kepler', year: 1571, passed: 1630 },
+      { first: 'Nicolaus', last: 'Copernicus', year: 1473, passed: 1543 },
+      { first: 'Max', last: 'Planck', year: 1858, passed: 1947 },
+      // { first: 'Katherine', last: 'Blodgett', year: 1898, passed: 1979 },
+      // { first: 'Ada', last: 'Lovelace', year: 1815, passed: 1852 },
+      // { first: 'Sarah E.', last: 'Goode', year: 1855, passed: 1905 },
+      // { first: 'Lise', last: 'Meitner', year: 1878, passed: 1968 },
+      // { first: 'Hanna', last: 'Hammarström', year: 1829, passed: 1909 }
+    ];
+
+    const people = ['Beck, Glenn', 'Becker, Carl', 'Beckett, Samuel', 'Beddoes, Mick', 'Beecher, Henry', 'Beethoven, Ludwig', 'Begin, Menachem', 'Belloc, Hilaire', 'Bellow, Saul', 'Benchley, Robert', 'Benenson, Peter', 'Ben-Gurion, David', 'Benjamin, Walter', 'Benn, Tony', 'Bennington, Chester', 'Benson, Leana', 'Bent, Silas', 'Bentsen, Lloyd', 'Berger, Ric', 'Bergman, Ingmar', 'Berio, Luciano', 'Berle, Milton', 'Berlin, Irving', 'Berne, Eric', 'Bernhard, Sandra', 'Berra, Yogi', 'Berry, Halle', 'Berry, Wendell', 'Bethea, Erin', 'Bevan, Aneurin', 'Bevel, Ken', 'Biden, Joseph', 'Bierce, Ambrose', 'Biko, Steve', 'Billings, Josh', 'Biondo, Frank', 'Birrell, Augustine', 'Black, Elk', 'Blair, Robert', 'Blair, Tony', 'Blake, William'];
+
+    // https://en.wikipedia.org/w/api.php?action=query&list=categorymembers&cmlimit=500&cmtitle=Category:Boulevards_in_Paris
+
+    const boulevards =  [
+        {
+          "pageid": 18339165,
+          "ns": 0,
+          "title": "Boulevards of Paris"
+        },
+        {
+          "pageid": 23524820,
+          "ns": 0,
+          "title": "City walls of Paris"
+        },
+        {
+          "pageid": 24570292,
+          "ns": 0,
+          "title": "Thiers wall"
+        },
+        {
+          "pageid": 23690618,
+          "ns": 0,
+          "title": "Wall of Charles V"
+        },
+        {
+          "pageid": 23629931,
+          "ns": 0,
+          "title": "Wall of Philip II Augustus"
+        },
+        {
+          "pageid": 18357662,
+          "ns": 0,
+          "title": "City gates of Paris"
+        },
+        {
+          "pageid": 4856477,
+          "ns": 0,
+          "title": "Haussmann's renovation of Paris"
+        },
+        {
+          "pageid": 18357472,
+          "ns": 0,
+          "title": "Boulevards of the Marshals"
+        },
+        {
+          "pageid": 18325129,
+          "ns": 0,
+          "title": "Boulevard Auguste-Blanqui"
+        },
+        {
+          "pageid": 40576013,
+          "ns": 0,
+          "title": "Boulevard Barb\u00e8s"
+        },
+        {
+          "pageid": 45130491,
+          "ns": 0,
+          "title": "Boulevard Beaumarchais"
+        },
+        {
+          "pageid": 29636994,
+          "ns": 0,
+          "title": "Boulevard de l'Amiral-Bruix"
+        },
+        {
+          "pageid": 60450260,
+          "ns": 0,
+          "title": "Boulevard Mortier"
+        },
+        {
+          "pageid": 60441782,
+          "ns": 0,
+          "title": "Boulevard Poniatowski"
+        },
+        {
+          "pageid": 21988904,
+          "ns": 0,
+          "title": "Boulevard des Capucines"
+        },
+        {
+          "pageid": 19088128,
+          "ns": 0,
+          "title": "Boulevard de la Chapelle"
+        },
+        {
+          "pageid": 22771680,
+          "ns": 0,
+          "title": "Boulevard de Clichy"
+        },
+        {
+          "pageid": 32433276,
+          "ns": 0,
+          "title": "Boulevard du Crime"
+        },
+        {
+          "pageid": 60453697,
+          "ns": 0,
+          "title": "Boulevard du G\u00e9n\u00e9ral-d'Arm\u00e9e-Jean-Simon"
+        },
+        {
+          "pageid": 1888629,
+          "ns": 0,
+          "title": "Boulevard Haussmann"
+        },
+        {
+          "pageid": 3789348,
+          "ns": 0,
+          "title": "Boulevard de l'H\u00f4pital"
+        },
+        {
+          "pageid": 21451437,
+          "ns": 0,
+          "title": "Boulevard des Italiens"
+        },
+        {
+          "pageid": 60454295,
+          "ns": 0,
+          "title": "Boulevard Lefebvre"
+        },
+        {
+          "pageid": 21911534,
+          "ns": 0,
+          "title": "Boulevard de la Madeleine"
+        },
+        {
+          "pageid": 19087860,
+          "ns": 0,
+          "title": "Boulevard de Magenta"
+        },
+        {
+          "pageid": 14787162,
+          "ns": 0,
+          "title": "Boulevard Montmartre"
+        },
+        {
+          "pageid": 18295445,
+          "ns": 0,
+          "title": "Boulevard du Montparnasse"
+        },
+        {
+          "pageid": 18295110,
+          "ns": 0,
+          "title": "Boulevard Raspail"
+        },
+        {
+          "pageid": 22076425,
+          "ns": 0,
+          "title": "Boulevard Richard-Lenoir"
+        },
+        {
+          "pageid": 19088061,
+          "ns": 0,
+          "title": "Boulevard de Rochechouart"
+        },
+        {
+          "pageid": 2440023,
+          "ns": 0,
+          "title": "Boulevard Saint-Germain"
+        },
+        {
+          "pageid": 3670075,
+          "ns": 0,
+          "title": "Boulevard Saint-Michel"
+        },
+        {
+          "pageid": 18323079,
+          "ns": 0,
+          "title": "Boulevard de S\u00e9bastopol"
+        },
+        {
+          "pageid": 39750172,
+          "ns": 0,
+          "title": "Boulevard de Strasbourg"
+        },
+        {
+          "pageid": 15293925,
+          "ns": 0,
+          "title": "Boulevard du Temple"
+        },
+        {
+          "pageid": 45031764,
+          "ns": 0,
+          "title": "Boulevard Voltaire"
+        },
+        {
+          "pageid": 3483470,
+          "ns": 0,
+          "title": "Boulevard de la Zone"
+        }
+      ]
+
+
+    // Array.prototype.filter()
+    // 1. Filter the list of inventors for those who were born in the 1500's
+    const filter = inventors.filter(el => el.year >= 1500 && el.year < 1600)
+    console.log(filter)
+
+
+    // Array.prototype.map()
+    // 2. Give us an array of the inventors' first and last names
+    const names = inventors.map(el => `${el.first} ${el.last}`)
+    console.log(names.flat())
+
+
+    // Array.prototype.sort()
+    // 3. Sort the inventors by birthdate, oldest to youngest
+    const birthdate = inventors.sort((a,b) => a.year - b.year)
+    console.table(birthdate)
+
+
+    // Array.prototype.reduce()
+    // 4. How many years did all the inventors live?
+    const totalYears = inventors.map(el => el.passed - el.year).reduce((total, currentValue) => total + currentValue)
+    console.log(totalYears)
+
+
+    // 5. Sort the inventors by years lived
+    const sortByYearsLives = inventors.sort((a, b) => (a.passed - a.year) - (b.passed - b.year))
+    console.table(sortByYearsLives)
+
+
+    // 6. create a list of Boulevards in Paris that contain 'de' anywhere in the name
+    // https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
+    const list = boulevards.filter(el => el.title.match(/de/))
+    console.log(list);
+
+
+    // 7. sort Exercise
+    // Sort the people alphabetically by last name
+    // const orderByLastname = people.map((el) => el.split(',')[0])
+
+    // 8. Reduce Exercise
+    // Sum up the instances of each of these
+    const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck' ];
+
+  </script>
+</body>
+</html>
